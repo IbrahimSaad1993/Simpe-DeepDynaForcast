@@ -4,44 +4,19 @@ A clean implementation of graph neural networks for tree-structured data classif
 
 ## Key Features
 
-✅ **Pure PyTorch Implementation** – No DGL, no PyTorch Geometric, just PyTorch!  
-✅ **Single GPU Support** – Simple and efficient  
-✅ **Clean Code Structure** – Easy to read and modify  
-✅ **Multiple GNN Architectures** – GCN, GAT, GIN, LSTM-based models  
-✅ **Custom Graph Operations** – All graph convolutions implemented from scratch  
+✅ **Pure PyTorch Implementation** - No DGL, no PyTorch Geometric, just PyTorch!  
+✅ **Single GPU Support** - Simple and efficient  
+✅ **Clean Code Structure** - Easy to read and modify  
+✅ **Multiple GNN Architectures** - GCN, GAT, GIN, LSTM-based models  
+✅ **Custom Graph Operations** - All graph convolutions implemented from scratch  
 
 ---
 
 ## Installation
 
 ```bash
-# Install other dependencies (NO graph libraries needed!)
+# Install dependencies (NO graph libraries needed!)
 pip install -r requirements.txt
-```
-
----
-
-## Dataset Preparation and Model Evaluation
-
-Before training the model, you need to **download and preprocess the dataset** from the original DeepDynaForecast GitHub repository.
-
-After preprocessing, **place the datasets into the appropriate folder**.  
-For example, if you are using the *Resp + TB* dataset, you should provide the full path to the cleaned data during training as follows:
-
-```bash
-python main.py --mode train                --ds_dir 'path_to_cleaned_data'                --ds_name 'ddf_resp+TB_20230222'
-```
-
-### Evaluation with Pretrained Models
-
-To evaluate using the pretrained models:
-
-1. **Download the checkpoints** for the corresponding models from the original DeepDynaForecast GitHub.  
-2. **Place the checkpoints** into the appropriate folder (e.g., `ddf_2/`).  
-3. Run the evaluation command as shown below:
-
-```bash
-python main.py --mode eval                --checkpoint 'path_to_model_checkpoint/ddf_2/model.pth.tar'
 ```
 
 ---
@@ -50,10 +25,10 @@ python main.py --mode eval                --checkpoint 'path_to_model_checkpoint
 
 All models are implemented in pure PyTorch:
 
-- **GCN**
-- **GAT**
-- **GIN**
-- **LSTM**
+- **GCN** - Graph Convolutional Network
+- **GAT** - Graph Attention Network
+- **GIN** - Graph Isomorphism Network
+- **LSTM** - Long Short-Term Memory based model
 
 ---
 
@@ -69,6 +44,51 @@ All models are implemented in pure PyTorch:
 ├── main.py             # Entry point
 ├── requirements.txt    # Dependencies (no graph libraries!)
 └── README.md           # Documentation
+```
+
+---
+
+## Dataset Setup
+
+For training the model, you need to download and preprocess the dataset from the original [DeepDynaForecast GitHub repository](https://github.com/original-repo-link). 
+
+### Steps:
+1. Download the dataset from the original repository
+2. Preprocess the data as needed
+3. Place the datasets into the appropriate folder
+
+**Example:** If the dataset is for resp + TB, provide the full path for cleaned_data during training.
+
+---
+
+## Usage
+
+### Training
+
+```bash
+python main.py --mode train \
+               --ds_dir 'path_for_cleaned_data' \
+               --ds_name 'ddf_resp+TB_20230222' \
+               --model gcn \
+               --hidden_dim 128 \
+               --num_layers 20 \
+               --batch_size 4 \
+               --lr 0.001 \
+               --max_epochs 100
+```
+
+### Evaluation
+
+For evaluation on already saved models:
+
+1. Download the checkpoints from the original [DeepDynaForecast GitHub repository](https://github.com/original-repo-link)
+2. Place these models in the appropriate folder
+3. Run the evaluation command:
+
+```bash
+python main.py --mode eval \
+               --checkpoint 'path_for_model.pth.tar_in_ddf_2_folder' \
+               --model gcn
 ```
 
 ---
@@ -99,29 +119,15 @@ All models are implemented in pure PyTorch:
 - `--weight_decay`: Weight decay (default: 0.0004)
 - `--early_stopping`: Early stopping patience (default: 10)
 
----
-
-## Usage
-
-### Training
-
-```bash
-python main.py --mode train                --model gcn                --hidden_dim 128                --num_layers 20                --batch_size 4                --lr 0.001                --max_epochs 100
-```
-
 ### Evaluation
-
-```bash
-python main.py --mode eval                --model gcn                --restore
-```
+- `--checkpoint`: Path to model checkpoint file
+- `--restore`: Restore model from checkpoint
 
 ---
 
 ## License
 
 MIT — see `LICENSE`.
-
----
 
 ## Citation
 
@@ -133,3 +139,7 @@ MIT — see `LICENSE`.
   url    = {https://github.com/your/repo}
 }
 ```
+
+## Acknowledgments
+
+This implementation uses datasets from [DeepDynaForecast](https://github.com/original-repo-link). Please cite their work if you use their datasets.

@@ -50,7 +50,7 @@ All models are implemented in pure PyTorch:
 
 ## Dataset Setup
 
-For training the model, you need to download and preprocess the dataset from the original [DeepDynaForecast GitHub repository](https://github.com/original-repo-link). 
+For training the model, you need to download and preprocess the dataset from the original [DeepDynaForecast GitHub repository](https://github.com/lab-smile/DeepDynaForecast/tree/main). 
 
 ### Steps:
 1. Download the dataset from the original repository
@@ -81,7 +81,7 @@ python main.py --mode train \
 
 For evaluation on already saved models:
 
-1. Download the checkpoints from the original [DeepDynaForecast GitHub repository]([https://github.com/original-repo-link](https://github.com/lab-smile/DeepDynaForecast/tree/main))
+1. Download the checkpoints from the original [DeepDynaForecast GitHub repository](https://github.com/lab-smile/DeepDynaForecast/tree/main)
 2. Place these models in the appropriate folder
 3. Run the evaluation command:
 
@@ -122,7 +122,6 @@ python main.py --mode eval \
 ### Evaluation
 - `--checkpoint`: Path to model checkpoint file
 
-
 ---
 
 ## License
@@ -142,4 +141,4 @@ MIT — see `LICENSE`.
 
 ## Acknowledgments
 
-This implementation uses datasets from [DeepDynaForecast](https://github.com/original-repo-link). Please cite their work if you use their datasets.
+This implementation uses datasets from [DeepDynaForecast](https://github.com/lab-smile/DeepDynaForecast/tree/main). Please cite their work if you use their datasets.

@@ -126,21 +126,6 @@ python main.py --mode eval \
 
 ---
 
-## License
-
-MIT — see `LICENSE`.
-
-## Citation
-
-```bibtex
-@software{gnn_tree_pytorch_2025,
-  title  = {Graph Neural Network for Tree Classification (Pure PyTorch)},
-  author = {Your Name},
-  year   = {2025},
-  url    = {https://github.com/your/repo}
-}
-```
-
 ## Acknowledgments
 
 This implementation uses datasets from [DeepDynaForecast](https://github.com/lab-smile/DeepDynaForecast/tree/main). Please cite their work if you use their datasets.

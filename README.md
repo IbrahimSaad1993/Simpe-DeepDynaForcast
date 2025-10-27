@@ -1,6 +1,6 @@
-# Graph Neural Network for Tree Classification
+# Simple Implementation of DeepDynaForecast
 
-A clean implementation of graph neural networks for tree-structured data classification using **pure PyTorch** (no external graph libraries!).
+A clean implementation of DeepDynaForecast using **pure PyTorch** (no external graph libraries!).
 
 ## Key Features
 

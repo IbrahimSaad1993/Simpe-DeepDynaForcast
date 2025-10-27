@@ -22,29 +22,6 @@ pip install -r requirements.txt
 
 ---
 
-## Usage
-
-### Training
-
-```bash
-python main.py --mode train \
-               --model gcn \
-               --hidden_dim 128 \
-               --num_layers 20 \
-               --batch_size 4 \
-               --lr 0.001 \
-               --max_epochs 100
-```
-
-### Evaluation
-
-```bash
-python main.py --mode eval \
-               --model gcn \
-               --restore
-```
-
----
 
 ## Available Models
 
@@ -101,6 +78,33 @@ All models are implemented in pure PyTorch:
 - `--early_stopping`: Early stopping patience (default: 10)
 
 ---
+
+
+## Usage
+
+### Training
+
+```bash
+python main.py --mode train \
+               --model gcn \
+               --hidden_dim 128 \
+               --num_layers 20 \
+               --batch_size 4 \
+               --lr 0.001 \
+               --max_epochs 100
+```
+
+### Evaluation
+
+```bash
+python main.py --mode eval \
+               --model gcn \
+               --restore
+```
+
+---
+
+
 
 ## License
 

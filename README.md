@@ -75,25 +75,6 @@ All models are implemented in pure PyTorch:
 
 ---
 
-## How It Works
-
-### Graph Representation
-Each graph is represented using standard PyTorch tensors:
-- `x`: Node features [num_nodes, feature_dim]
-- `edge_index`: Edge connectivity [2, num_edges] 
-- `edge_attr`: Edge features [num_edges, edge_dim]
-- `y`: Node labels [num_nodes]
-
-### Batching
-Multiple graphs are batched into a single disconnected graph using the `collate_graphs` function. Node indices are offset appropriately.
-
-### Graph Operations
-All graph operations (message passing, aggregation, attention) are implemented using PyTorch's scatter operations:
-- `scatter_add`: For aggregating neighbor messages
-- `index_select`: For gathering neighbor features
-- No external graph library needed!
-
----
 
 ## Configuration Options
 

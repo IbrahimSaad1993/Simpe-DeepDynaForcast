@@ -52,10 +52,10 @@ python main.py --mode eval \
 
 All models are implemented in pure PyTorch:
 
-- **GCN**: Graph Convolutional Network - Simple neighborhood aggregation
-- **GAT**: Graph Attention Network - Attention-based aggregation  
-- **GIN**: Graph Isomorphism Network - More expressive than GCN
-- **LSTM**: LSTM-based message passing network - Sequential processing
+- **GCN**
+- **GAT** 
+- **GIN**
+- **LSTM**
 
 ---
 

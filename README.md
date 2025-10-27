@@ -15,8 +15,6 @@ A clean implementation of graph neural networks for tree-structured data classif
 ## Installation
 
 ```bash
-# Install PyTorch (check https://pytorch.org for your system)
-pip install torch torchvision torchaudio
 
 # Install other dependencies (NO graph libraries needed!)
 pip install -r requirements.txt

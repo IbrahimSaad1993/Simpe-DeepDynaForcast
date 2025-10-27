@@ -38,7 +38,9 @@ All models are implemented in pure PyTorch:
 .
 ├── config.py           # Configuration parameters
 ├── dataset.py          # Dataset loading (pure PyTorch)
-├── models.py           # GNN models (pure PyTorch)
+├── gcn.py              # GNN model (pure PyTorch)
+├── gin.py              # GIN model (pure PyTorch)
+├── pdglstm.py          # PDGLSTM model (pure PyTorch)
 ├── trainer.py          # Training/evaluation logic
 ├── utils.py            # Metrics and visualization
 ├── main.py             # Entry point

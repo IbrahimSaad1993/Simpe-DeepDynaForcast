@@ -128,4 +128,4 @@ python main.py --mode eval \
 
 ## Acknowledgments
 
-This implementation uses datasets from [DeepDynaForecast](https://github.com/lab-smile/DeepDynaForecast/tree/main). Please cite their work if you use their datasets.
+This implementation uses datasets from [DeepDynaForecast](https://github.com/lab-smile/DeepDynaForecast/tree/main). Please cite their work if you use their datasets and code.
